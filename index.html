@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSecurity Portfolio | Your name</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+  <canvas id="matrixCanvas"></canvas>
+
+  <div id="intro-terminal">
+    <div id="boot-sequence"></div>
+    <div id="press-key" style="margin-top: 30px; opacity: 0; transition: opacity 1s ease;">
+      <p>Press any key to continue...</p>
+    </div>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <nav id="desktop-nav">
+    <a href="#about" onmouseover="playSound('hover')"><i class="fas fa-user"></i> About</a>
+    <a href="#skills" onmouseover="playSound('hover')"><i class="fas fa-code"></i> Skills</a>
+    <a href="#projects" onmouseover="playSound('hover')"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#contact" onmouseover="playSound('hover')"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+
+  <div class="mobile-nav" id="mobileNav">
+    <span class="close-btn" onclick="toggleMobileNav()">&times;</span>
+    <a href="#about" onclick="toggleMobileNav()"><i class="fas fa-user"></i> About</a>
+    <a href="#skills" onclick="toggleMobileNav()"><i class="fas fa-code"></i> Skills</a>
+    <a href="#projects" onclick="toggleMobileNav()"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#contact" onclick="toggleMobileNav()"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+
+
+  <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+<div id="about-content">
+  <img src="assets/your-image.jpg" alt="Ying Qian">
+  <div>
+    <p class="typewriter" id="animated-bio">
+      Hi, I'm User, a cybersecurity student who thrive for more skills...
+    </p>
+  </div>
+</div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-toggle">
+      <button onclick="showSkills('tech')" id="btn-tech" class="active">Tech Stacks</button>
+      <button onclick="showSkills('tools')" id="btn-tools">Tools</button>
+    </div>
+
+    <!-- Tech Stacks -->
+    <div id="tech-skills" class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-back">Advanced</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill-back">Advanced</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill-back">Advanced</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fab fa-java"></i> Java</div>
+          <div class="skill-back">Beginner</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fab fa-js-square"></i> JavaScript</div>
+          <div class="skill-back">Advanced</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div id="tool-skills" class="skills-grid" style="display: none;">
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fab fa-github"></i> GitHub</div>
+          <div class="skill-back">Git Hosting</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fas fa-flask"></i> Anaconda</div>
+          <div class="skill-back">Python</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fas fa-code"></i> Eclipse</div>
+          <div class="skill-back">Java</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-inner">
+          <div class="skill-front"><i class="fas fa-terminal"></i> VS Code</div>
+          <div class="skill-back">Website Design</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <img src="pic1.png" alt="VulnLab">
+        <h3>Course Registeration System </h3>
+        <p></p>
+        <div class="project-links">
+          <a href="https://github.com/bulufishh/Course-registeration-system.git"><i class="fab fa-github"></i></a>
+          <a href="https://anaconda.com/app/share/notebooks/cbf24c5f-cb50-46da-8e03-95b0ea5e2976/overview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="project">
+        <img src="pic2.webp" alt="Packet Sniffer">
+        <h3>Pokemon Ga-Olé </h3>
+        <p>a console-based simulation of the official Pokémon Ga-Olé arcade game, designed with Java and object-oriented programming principles. It features catching, battling, scoring, stage selection, item usage, and high score tracking</p>
+        <div class="project-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/260x140" alt="Project3">
+        <h3>Project 3</h3>
+        <p>Random description.</p>
+        <div class="project-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+      <form id="contactForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name">
+        <div id="nameError" class="error-msg"></div>
+        <input type="email" id="email" placeholder="Your Email">
+        <div id="emailError" class="error-msg"></div>
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error-msg"></div>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:user@gmail.com">user@gmail.com</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/bulufishh" target="_blank">github.com/bulufishh</a></p>
+        <p><i class="fa-solid fa-phone"></i> <a href="#" target="_blank">+123-456-7890</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Name -  Portfolio</p>
+    <div class="social-links">
+      <a href="https://github.com/bulufishh" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-envelope"></i></a>
+
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
